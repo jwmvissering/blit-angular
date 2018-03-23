@@ -1,0 +1,224 @@
+/* LOCAL fonts */
+@font-face{
+    font-family:'Metropolis';
+    src:url(assets/fonts/metropolis/metropolis-black-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-black-webfont.woff) format('woff');
+    font-weight:900;
+    font-style:normal;
+}
+@font-face{
+    font-family:'Metropolis';
+    src:url(assets/fonts/metropolis/metropolis-bold-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-bold-webfont.woff) format('woff');
+    font-weight:800;
+    font-style:normal;
+}
+@font-face{
+    font-family:'Metropolis';
+    src:url(assets/fonts/metropolis/metropolis-medium-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-medium-webfont.woff) format('woff');
+    font-weight:600;
+    font-style:normal
+}
+@font-face{
+    font-family:'Metropolis';
+    src:url(assets/fonts/metropolis/metropolis-mediumitalic-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-mediumitalic-webfont.woff) format('woff');font-weight:600;font-style:italic}@font-face{font-family:'Metropolis';src:url(assets/fonts/metropolis/metropolis-regular-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-regular-webfont.woff) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'Metropolis';src:url(assets/fonts/metropolis/metropolis-regularitalic-webfont.woff2) format('woff2'),url(assets/fonts/metropolis/metropolis-regularitalic-webfont.woff) format('woff');font-weight:400;font-style:italic}
+
+    body {
+        background: white;
+        font: 1em "Metropolis", sans-serif;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        color: #222;
+        -webkit-text-stroke: 0.45px;
+        // or
+        -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+        // or
+        text-shadow: #fff 0px 1px 1px;
+      }
+      
+    #overlay {
+        background: rgba(41,46,51,0.8);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: none;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      main {
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+      }
+      
+      .centered {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      
+      h1 {
+        @media only screen and (max-width: 440px) {
+          font-size: 1.5em;
+        }
+      }
+      
+      .hidden-xs {
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+      
+      input {
+        font: 300 1.4em "Metropolis", sans-serif;
+      }
+      
+      input[type=text] {
+        border: 1px #eee solid;
+        background: #fff;
+        padding: 20px;
+        width: 500px;
+        color: #888;
+        border-radius: 5px;
+        box-shadow: 0 3px 8px #ddd;
+      
+        @media only screen and (max-width: 500px) {
+          padding: 20px 10px;
+          font-size: 1em;
+          width: 100%;
+          box-shadow: 0 3px 5px #ddd;
+        }
+      }
+      
+      input[type=text]:focus {
+        outline: 0;
+      }
+      
+      input[type=submit], .cta {
+        background: #3742fa;
+        color: white;
+        padding: 15px 50px;
+        border: 0;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: 700;
+        box-shadow: 0 3px 8px #ddd;
+      
+        &:hover {
+          background: lighten(#3742fa, 3%);
+          cursor: pointer;
+        }
+      
+        @media only screen and (max-width: 440px) {
+          padding: 20px 10px;
+          font-size: 1em;
+          width: 100%;
+        }
+      }
+      
+      .canvas {
+        margin: 20px;
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.4),10px 0 8px rgba(0,0,0,0.2);
+        border-radius: 3px;
+      
+        @media only screen and (max-width: 478px) {
+          width: 90%;
+          margin: 10px 20px;
+        }
+      }
+      
+      .image {
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.3),10px 0 8px rgba(0,0,0,0.1);
+      }
+      
+      
+      .col-6 {
+        width: 50%;
+        float: left;
+        text-align: left;
+      
+        @media only screen and (max-width: 478px) {
+          width: 100%;
+      
+          &:nth-child(even) {
+            margin-top: 20px;
+          }
+        }
+      }
+      
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .credits {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: #888;
+      
+        a {
+          color: #888;
+          text-decoration: none;
+        }
+      }
+      
+      .order {
+      
+        label {
+          font-weight: 800;
+          margin-top: 0;
+          padding-top: 0;
+        }
+      
+        select {
+          background: white;
+          box-shadow: 0 3px 8px #ddd;
+          padding: 20px;
+          border-radius: 3px;
+          border: 1px #eee solid;
+          font: 300 1.3em "Metropolis", sans-serif;
+          width: 100%;
+          margin-top: 10px;
+          color: #555;
+        }
+      
+        .price {
+          text-align: right;
+          font-size: 4em;
+          font-weight: 900;
+          margin: 40px 0 0 0;
+      
+          .currency {
+            margin-top: -10px;
+            font-size: 0.5em;
+            display: inline-block;
+          }
+        }
+      
+        .cta {
+          text-shadow: none;
+          text-decoration: none;
+          font-size: 1.2em;
+          display: inline-block;
+          margin: 0 auto;
+      
+          @media only screen and (max-width: 478px) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      
+        sup {
+          font-size: 0.5em;
+        }
+      }

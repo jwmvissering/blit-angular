@@ -1,4 +1,8 @@
+![alt text](https://github.com/jwmvissering/blit-angular/blob/develop/src/assets/img/blit-logo.png)
+
 # Blit
+
+Choose your favourite in an awesome collection of photo's and print it to canvas.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 

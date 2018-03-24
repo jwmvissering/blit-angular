@@ -79,34 +79,7 @@ input[type="submit"],
 
 
 
-.canvas {
-  margin: 20px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 10px 0 8px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
 
-  @media only screen and (max-width: 478px) {
-    width: 90%;
-    margin: 10px 20px;
-  }
-}
-
-.image {
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), 10px 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.col-6 {
-  width: 50%;
-  float: left;
-  text-align: left;
-
-  @media only screen and (max-width: 478px) {
-    width: 100%;
-
-    &:nth-child(even) {
-      margin-top: 20px;
-    }
-  }
-}
 
 .container {
   max-width: 900px;

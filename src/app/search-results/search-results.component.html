@@ -1,13 +1,33 @@
 <main>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="text-center">
-                    <h1>Resultaten voor ''</h1>
-                    <p>0 resultaten</p>
-                    
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="text-center">
+          <h1>Resultaten voor '{{searchValue}}'</h1>
+          <div *ngIf="resultCount > 0">
+            <p>{{resultCount}} resultaten</p>
+          </div>
         </div>
+      </div>
     </div>
+    <div *ngIf="photos; else loading" class="row">
+      <div *ngIf="resultCount == 0; else resultlist" class="col">
+        <h3>Geen resultaten gevonden</h3>
+      </div>
+      <ng-template #resultlist>
+        <div *ngFor="let photo of photos.results" class="col-xs-12 col-sm-6">
+          <div class="canvas-container">
+            <img class="canvas" [src]="photo.urls.small">
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <ng-template #loading class="row">
+      <div class="col">
+        <div class="text-center">
+          <h2 class="loading">Aan het laden..</h2>
+        </div>
+      </div>
+    </ng-template>
+  </div>
 </main>

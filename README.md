@@ -1,4 +1,4 @@
-![alt text](https://github.com/jwmvissering/blit-angular/blob/develop/src/assets/img/blit-logo.png)
+![Logo Blit](https://raw.githubusercontent.com/jwmvissering/blit-angular/develop/src/assets/img/blit-logo.png)
 
 # Blit
 

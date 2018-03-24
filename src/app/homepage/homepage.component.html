@@ -4,10 +4,13 @@
             <div class="col">
                 <div class="main-content text-center">
                     <h1>Meer dan 471.000 ideeën voor aan jouw muur.</h1>
-                    <form (ngSubmit)="handleSearchImage(searchValue)" #searchForm="ngForm" autocomplete="off">
-                        <input type="text" [(ngModel)]="searchValue" name="value" 
-                            placeholder="Zoek op kleur, locatie of onderwerp..." />
-                        <br />
+                    <form (ngSubmit)="handleSearchImage()" #searchForm="ngForm" autocomplete="off">
+                        <div class="d-none d-sm-block">
+                            <input type="text" [(ngModel)]="searchValue" name="value" placeholder="Zoek op kleur, locatie of onderwerp.." />
+                        </div>
+                        <div class="d-block d-sm-none">
+                            <input type="text" [(ngModel)]="searchValue" name="value" placeholder="Zoeken.." />
+                        </div>
                         <input type="submit" value="Zoeken" />
                     </form>
                 </div>

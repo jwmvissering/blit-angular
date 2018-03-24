@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -8,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
   searchValue: string; 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  handleSearchImage(value:string){
-    alert(value);
+  handleSearchImage(){
+    if (this.searchValue.length < 3) {
+      alert('Foutieve invoer');
+    } else {
+      this.router.navigate(['search', this.searchValue])
+    }
   }
 
 }

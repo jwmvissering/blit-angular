@@ -6,6 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
   declarations: [
     AppComponent,
     HomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchResultsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

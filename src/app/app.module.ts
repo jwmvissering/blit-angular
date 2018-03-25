@@ -9,6 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { AppService } from './app.service';
+import { PhotoDetailsComponent } from './photo-details/photo-details.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { AppService } from './app.service';
     AppComponent,
     HomepageComponent,
     HeaderComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    PhotoDetailsComponent
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

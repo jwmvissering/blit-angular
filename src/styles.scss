@@ -28,6 +28,12 @@ h1 {
   }
 }
 
+/* GENERAL */
+.canvas {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 10px 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
 /* FORMS */
 input {
   font: 300 1.4em "Metropolis", sans-serif;
@@ -74,75 +80,5 @@ input[type="submit"],
     padding: 20px 10px;
     font-size: 1em;
     width: 100%;
-  }
-}
-
-
-
-
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.credits {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  color: #888;
-
-  a {
-    color: #888;
-    text-decoration: none;
-  }
-}
-
-.order {
-  label {
-    font-weight: 800;
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  select {
-    background: white;
-    box-shadow: 0 3px 8px #ddd;
-    padding: 20px;
-    border-radius: 3px;
-    border: 1px #eee solid;
-    font: 300 1.3em "Metropolis", sans-serif;
-    width: 100%;
-    margin-top: 10px;
-    color: #555;
-  }
-
-  .price {
-    text-align: right;
-    font-size: 4em;
-    font-weight: 900;
-    margin: 40px 0 0 0;
-
-    .currency {
-      margin-top: -10px;
-      font-size: 0.5em;
-      display: inline-block;
-    }
-  }
-
-  .cta {
-    text-shadow: none;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: inline-block;
-    margin: 0 auto;
-
-    @media only screen and (max-width: 478px) {
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  sup {
-    font-size: 0.5em;
   }
 }

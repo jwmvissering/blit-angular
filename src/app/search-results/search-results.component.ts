@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, ParamMap } from "@angular/router";
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import { AppService } from "../app.service";
 
 @Component({
@@ -12,7 +12,7 @@ export class SearchResultsComponent implements OnInit {
   photos: any;
   resultCount: any;
 
-  constructor(private route: ActivatedRoute, private appService: AppService) {}
+  constructor(private router: Router, private route: ActivatedRoute, private appService: AppService) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -24,9 +24,16 @@ export class SearchResultsComponent implements OnInit {
         this.appService.searchPhotos(this.searchValue).subscribe( photos => {
             this.photos = photos;
             this.resultCount = this.photos.total;
-            console.log(photos);
+            // console.log(photos);
         });
       }
     });
+  }
+
+  handleSelectPhoto(photo: any) {
+    if(photo.id){
+      this.appService.setSelectedPhoto(photo);
+      this.router.navigate(['photo', photo.id]);
+    }
   }
 }

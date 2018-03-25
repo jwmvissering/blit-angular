@@ -3,7 +3,7 @@ import { Observable } from "rxjs/Observable";
 import { HttpClient, HttpParams } from "@angular/common/http";
 
 @Injectable()
-export class AppService {
+export class PhotoService {
   private selectedPhoto: any;
 
   private unsplashApiKeyJamon: string;

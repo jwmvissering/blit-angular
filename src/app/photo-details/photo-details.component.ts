@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { AppService } from "../app.service";
+import { PhotoService } from "../shared/services/photo.service";
 import { ActivatedRoute, ParamMap } from "@angular/router";
+import { PrintService } from "../shared/services/print.service";
 
 @Component({
   selector: "app-photo-details",
@@ -9,21 +10,36 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
 })
 export class PhotoDetailsComponent implements OnInit {
   photoId: string;
+  products: { id; name; url }[];
   selectedPhoto: any;
+  selectedProduct: { id; name; url }[] = null;
 
-  constructor(private appService: AppService, private route: ActivatedRoute) {
+  constructor(private photoService: PhotoService, private route: ActivatedRoute, private printService: PrintService) {
     this.route.paramMap.subscribe(params => {
       this.photoId = params.get("id");
     });
   }
 
   ngOnInit() {
-    this.selectedPhoto = this.appService.getSelectedPhoto();
+    this.getSelectedPhoto();
+    this.getProducts();
+  }
+
+  getSelectedPhoto(){
+    this.selectedPhoto = this.photoService.getSelectedPhoto();
     if (!this.selectedPhoto) {
-      this.appService.getPhotoFromId(this.photoId).subscribe(photo => {
+      this.photoService.getPhotoFromId(this.photoId).subscribe(photo => {
         this.selectedPhoto = photo;
       });
-      this.appService.setSelectedPhoto(this.selectedPhoto);
+      this.photoService.setSelectedPhoto(this.selectedPhoto);
     }
+  }
+
+  getProducts(){
+    this.products = this.printService.getCanvasProducts();
+  }
+
+  selectProduct(product: any){
+    this.selectedProduct = product;
   }
 }

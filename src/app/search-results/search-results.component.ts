@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
-import { AppService } from "../app.service";
+import { PhotoService } from "../shared/services/photo.service";
 
 @Component({
   selector: "app-search-results",
@@ -12,7 +12,7 @@ export class SearchResultsComponent implements OnInit {
   photos: any;
   resultCount: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private appService: AppService) {}
+  constructor(private router: Router, private route: ActivatedRoute, private photoService: PhotoService) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -21,7 +21,7 @@ export class SearchResultsComponent implements OnInit {
       if (this.searchValue.length < 3) {
         alert("Foutieve invoer");
       } else {
-        this.appService.searchPhotos(this.searchValue).subscribe( photos => {
+        this.photoService.searchPhotos(this.searchValue).subscribe( photos => {
             this.photos = photos;
             this.resultCount = this.photos.total;
             // console.log(photos);
@@ -32,7 +32,7 @@ export class SearchResultsComponent implements OnInit {
 
   handleSelectPhoto(photo: any) {
     if(photo.id){
-      this.appService.setSelectedPhoto(photo);
+      this.photoService.setSelectedPhoto(photo);
       this.router.navigate(['photo', photo.id]);
     }
   }

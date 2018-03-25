@@ -17,7 +17,7 @@
         </div>
       </div>
       <ng-template #resultlist>
-        <div *ngFor="let photo of photos.results" (click)="handleSelectPhoto(photo)" class="col-xs-12 col-sm-4">
+        <div *ngFor="let photo of photos.results" (click)="handleSelectPhoto(photo)" class="col-xs-12 col-sm-4 pointer">
           <div class="canvas-container">
             <img class="canvas" [src]="photo.urls.small">
           </div>

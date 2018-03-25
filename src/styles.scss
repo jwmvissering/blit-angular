@@ -2,15 +2,19 @@
 @import "./app/shared/fonts";
 @import "./app/shared/material-theme";
 
-body {
-  background: white;
-  font: 1em "Metropolis", sans-serif;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  color: #222;
-  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
-  text-shadow: #fff 0px 1px 1px;
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    background: white;
+    font: 1em "Metropolis", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    text-shadow: #fff 0px 1px 1px;
+  }
 }
 
 h1 {
@@ -33,6 +37,10 @@ h1 {
 .canvas {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), 10px 0 8px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 /* FORMS */

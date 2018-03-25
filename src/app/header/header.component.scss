@@ -1,6 +1,5 @@
 header {
   overflow: hidden;
-
   #logo {
     background: url("../../assets/img/blit-logo.png");
     background-size: 100% 100%;
@@ -18,39 +17,33 @@ header {
       text-indent: -999px;
     }
   }
-}
+  nav {
+    float: right;
+    #nav-trigger {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      padding: 15px;
+      top: 0;
+      right: 0;
+      margin-right: 5px;
+      margin-top: 18px;
+      padding: 15px;
 
-nav {
-  float: right;
-  z-index: 2;
+      div {
+        width: 20px;
+        height: 4px;
+        background: #222;
+        margin: 4px 0;
 
-  #nav-trigger,
-  #nav-close {
-    display: block;
-    margin-right: 5px;
-    margin-top: 18px;
-    padding: 15px;
+        &:first-child {
+          margin-top: 0;
+        }
 
-    div {
-      width: 20px;
-      height: 4px;
-      background: #222;
-      margin: 4px 0;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
-  }
-
-  #nav-close {
-    position: absolute;
-    padding: 15px;
-    top: 0;
-    right: 0;
   }
 }

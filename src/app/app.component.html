@@ -1,2 +1,24 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <app-header (navToggle)="sidenav.toggle()"></app-header>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <mat-sidenav #sidenav mode="over" position="end">
+            <div class="nav-list">
+                <a (click)="sidenav.toggle()" id="nav-close">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </a>
+                <li>
+                    <a class="">Bezorging</a>
+                </li>
+                <li>
+                    <a class="">Prijzen</a>
+                </li>
+                <li>
+                    <a class="">Over Blit</a>
+                </li>
+            </div>
+        </mat-sidenav>
+</mat-sidenav-container>

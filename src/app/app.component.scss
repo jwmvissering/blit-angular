@@ -1,0 +1,50 @@
+mat-sidenav-container {
+  height: 100%;
+  .nav-list {
+    min-width: 300px;
+    padding: 20px 0 10px 20px;
+    background: #fff;
+    font-size: 1.2em;
+
+    li {
+      list-style: none;
+      margin: 25px 0;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    #nav-close {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      padding: 15px;
+      top: 0;
+      right: 0;
+      margin-right: 5px;
+      margin-top: 18px;
+      padding: 15px;
+
+      div {
+        width: 20px;
+        height: 4px;
+        background: #222;
+        margin: 4px 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

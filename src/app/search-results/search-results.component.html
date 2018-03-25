@@ -12,7 +12,9 @@
     </div>
     <div *ngIf="photos; else loading" class="row">
       <div *ngIf="resultCount == 0; else resultlist" class="col">
-        <h3>Geen resultaten gevonden</h3>
+        <div class="no-results text-center">
+          <h3>Geen resultaten gevonden</h3>
+        </div>
       </div>
       <ng-template #resultlist>
         <div *ngFor="let photo of photos.results" (click)="handleSelectPhoto(photo)" class="col-xs-12 col-sm-4">
@@ -22,10 +24,10 @@
         </div>
       </ng-template>
     </div>
-    <ng-template #loading class="row">
-      <div class="col">
-        <div class="text-center">
-          <h2 class="loading">Aan het laden..</h2>
+    <ng-template #loading>
+      <div class="row justify-content-md-center">
+        <div class="col-auto">
+          <mat-spinner class="loading"></mat-spinner>
         </div>
       </div>
     </ng-template>

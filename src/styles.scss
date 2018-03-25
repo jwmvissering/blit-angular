@@ -1,5 +1,6 @@
-@import "assets/fonts/fonts";
 @import "~bootstrap/scss/bootstrap";
+@import "./app/shared/fonts";
+@import "./app/shared/material-theme";
 
 body {
   background: white;

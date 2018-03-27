@@ -1,4 +1,4 @@
-<main>
+<main id="search-results">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -7,6 +7,16 @@
           <div *ngIf="resultCount > 0">
             <p>{{resultCount}} resultaten</p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="select-orientation text-center">
+          <div class="small-info-text">Kies jouw formaat:</div>
+          <a (click)="setOrientation('landscape')" class="landscape pointer"></a>
+          <a (click)="setOrientation('portrait')" class="portrait pointer"></a>
+          <a (click)="setOrientation('square')" class="square pointer"></a>
         </div>
       </div>
     </div>

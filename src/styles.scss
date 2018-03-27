@@ -22,6 +22,12 @@ h1 {
   font-size: 2rem;
 }
 
+.small-info-text{
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #555;
+}
+
 @media only screen and (max-width: 440px) {
   h1 {
     font-size: 1.5em;

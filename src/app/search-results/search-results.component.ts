@@ -9,10 +9,15 @@ import { PhotoService } from "../shared/services/photo.service";
 })
 export class SearchResultsComponent implements OnInit {
   searchValue: string;
+  orientation: string = "landscape";
   photos: any;
   resultCount: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private photoService: PhotoService) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private photoService: PhotoService
+  ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -21,19 +26,31 @@ export class SearchResultsComponent implements OnInit {
       if (this.searchValue.length < 3) {
         alert("Foutieve invoer");
       } else {
-        this.photoService.searchPhotos(this.searchValue).subscribe( photos => {
-            this.photos = photos;
-            this.resultCount = this.photos.total;
-            // console.log(photos);
-        });
+        this.searchPhotos();
       }
     });
   }
 
   handleSelectPhoto(photo: any) {
-    if(photo.id){
+    if (photo.id) {
       this.photoService.setSelectedPhoto(photo);
-      this.router.navigate(['photo', photo.id]);
+      this.router.navigate(["photo", photo.id]);
     }
+  }
+
+  searchPhotos() {
+    this.photoService
+      .searchPhotos(this.searchValue, this.orientation)
+      .subscribe(photos => {
+        this.photos = photos;
+        this.resultCount = this.photos.total;
+        // console.log(photos);
+      });
+  }
+
+  setOrientation(orientation: string) {
+    this.orientation = orientation;
+    this.photos = null;
+    this.searchPhotos();
   }
 }

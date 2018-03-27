@@ -1,17 +1,44 @@
-.canvas-container {
-  padding: 15px 0px;
-  .canvas {
-    max-width: 100%;
+#search-results {
+  .select-orientation {
+    border-top: 1px #eee solid;
+    padding-top: 20px;
+    margin-top: 10px;
+    a {
+      margin: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      border: 4px #3498db solid;
+      &.landscape {
+        width: 24px;
+        height: 15px;
+      }
+      &.portrait {
+        width: 15px;
+        height: 24px;
+      }
+      &.square {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .canvas-container {
+    padding: 15px 0px;
+    .canvas {
+      max-width: 100%;
+    }
   }
 }
 
 @media (max-width: 600px) {
-  .loading, .no-results {
+  .loading,
+  .no-results {
     margin-top: 100px;
   }
 }
 @media (min-width: 601px) {
-  .loading, .no-results {
+  .loading,
+  .no-results {
     margin-top: 150px;
   }
 }

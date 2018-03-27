@@ -6,7 +6,7 @@ html {
   height: 100%;
   body {
     height: 100%;
-    background: white;
+    background: #f9f9f9;
     font: 1em "Metropolis", sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -19,6 +19,7 @@ html {
 
 h1 {
   font-weight: bold;
+  font-size: 2rem;
 }
 
 @media only screen and (max-width: 440px) {
@@ -49,13 +50,13 @@ input {
 }
 
 input[type="text"] {
-  border: 1px #eee solid;
+  border: none;
   background: #fff;
   padding: 20px;
   width: 500px;
   color: #888;
-  border-radius: 5px;
-  box-shadow: 0 3px 8px #ddd;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   @media only screen and (max-width: 500px) {
     padding: 20px 10px;
